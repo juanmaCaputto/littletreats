@@ -1,24 +1,27 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import classes from './MainNavigation.module.css';
+import HeaderCartButton from "./HeaderCartButton";
+import classes from "./MainNavigation.module.css";
 
-function MainNavigation() {
-
+const MainNavigation = (props) => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <div className={classes.logo}></div>
       <nav>
         <ul>
           <li>
-            <Link href='/'>All Meetups</Link>
+            <Link href="/">Cookies!</Link>
           </li>
           <li>
-            <Link href='/new-meetup'>Add New Meetup</Link>
+            <Link href="/new-meetup">Add New Cookie!</Link>
+          </li>
+          <li>
+            <HeaderCartButton onClick={props.onShowCart} />
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default MainNavigation;
