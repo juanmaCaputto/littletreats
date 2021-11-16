@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // fetch data for a single Pack
 
-  const PackId = context.params.PackId;
+  const packId = context.params.packId;
 
   const client = await MongoClient.connect(
     'mongodb+srv://capumotto:macanudo@cluster0.gnfcw.mongodb.net/packs?retryWrites=true&w=majority'
