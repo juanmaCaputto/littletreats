@@ -1,7 +1,7 @@
-import classes from './packList.module.css';
+import classes from './PackList.module.css';
 import Pack from '../Meals/MealItem/Pack';
 
-function packList(props) {
+function PackList(props) {
   return (
     <ul className={classes.list}>
       {props.packs.map((pack) => (
@@ -18,4 +18,4 @@ function packList(props) {
   );
 }
 
-export default packList;
+export default PackList;
