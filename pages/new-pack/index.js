@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import NewPackForm from '../../components/Packs/NewPackForm';
+import NewPackForm from '../../components/packs/NewPackForm';
 
 function NewPackPage() {
   const router = useRouter();
