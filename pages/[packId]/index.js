@@ -64,7 +64,7 @@ export async function getStaticProps(context) {
       packData: {
         id: selectedPack._id.toString(),
         title: selectedPack.title,
-        address: selectedPack.address,
+        price: selectedPack.price,
         image: selectedPack.image,
         description: selectedPack.description,
       },
