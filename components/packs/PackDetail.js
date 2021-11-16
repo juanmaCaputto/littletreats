@@ -1,6 +1,6 @@
-import classes from './MeetupDetail.module.css';
+import classes from './PackDetail.module.css';
 
-function MeetupDetail(props) {
+function PackDetail(props) {
   return (
     <section className={classes.detail}>
       <img
@@ -8,10 +8,10 @@ function MeetupDetail(props) {
         alt={props.title}
       />
       <h1>{props.title}</h1>
-      <address>{props.address}</address>
+      <p>{props.price}</p>
       <p>{props.description}</p>
     </section>
   );
 }
 
-export default MeetupDetail;
+export default PackDetail;

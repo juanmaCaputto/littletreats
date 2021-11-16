@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 
-import classes from "./MealItemForm.module.css";
-import Input from "../../UI/Input";
+import classes from "./PackItemForm.module.css";
+import Input from "../../ui/Input";
 
-const MealItemForm = (props) => {
+const PackItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true)
   const amountInputRef = useRef();
 
@@ -45,4 +45,4 @@ const MealItemForm = (props) => {
   );
 };
 
-export default MealItemForm;
+export default PackItemForm;

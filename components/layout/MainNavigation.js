@@ -13,7 +13,7 @@ const MainNavigation = (props) => {
             <Link href="/">Cookies!</Link>
           </li>
           <li>
-            <Link href="/new-meetup">Add New Cookie!</Link>
+            <Link href="/new-pack">Add New Cookie!</Link>
           </li>
           <li>
             <HeaderCartButton onClick={props.onShowCart} />

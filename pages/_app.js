@@ -5,6 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
+      <div id='overlays'></div>
       <Layout>
         <Component {...pageProps} />
       </Layout>

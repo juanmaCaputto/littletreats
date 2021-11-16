@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import classes from "./AvailableMeals.module.css";
 
-import MealItem from "./MealItem/MealItem";
+import MealItem from "./MealItem/Pack";
 import Card from "../UI/Card";
 
 const AvailableMeals = () => {

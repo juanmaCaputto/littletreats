@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 
-import MeetupList from '../components/meetups/MeetupList';
+import PackList from '../components/packs/PackList';
 
 function HomePage(props) {
   return (
@@ -14,7 +14,7 @@ function HomePage(props) {
           content='Galletitas personalizadas y hechas con amor! <3'
         />
       </Head>
-      <MeetupList meetups={props.meetups} />
+      <PackList packs={props.packs} />
     </Fragment>
   );
 }
@@ -27,7 +27,7 @@ function HomePage(props) {
 
 //   return {
 //     props: {
-//       meetups: DUMMY_MEETUPS
+//       packs: DUMMY_packs
 //     }
 //   };
 // }
@@ -35,23 +35,23 @@ function HomePage(props) {
 export async function getStaticProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
-    'mongodb+srv://capumotto:macanudo@cluster0.gnfcw.mongodb.net/meetups?retryWrites=true&w=majority'
-  );
+    'mongodb+srv://capumotto:macanudo@cluster0.gnfcw.mongodb.net/packs?retryWrites=true&w=majority');
   const db = client.db();
 
-  const meetupsCollection = db.collection('meetups');
+  const packsCollection = db.collection('packs');
 
-  const meetups = await meetupsCollection.find().toArray();
+  const packs = await packsCollection.find().toArray();
 
   client.close();
 
   return {
     props: {
-      meetups: meetups.map((meetup) => ({
-        title: meetup.title,
-        address: meetup.address,
-        image: meetup.image,
-        id: meetup._id.toString(),
+      packs: packs.map((pack) => ({
+        title: pack.title,
+        price: pack.price,
+        image: pack.image,
+        description: pack.description,
+        id: pack._id.toString(),
       })),
     },
     revalidate: 1,
