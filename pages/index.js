@@ -1,8 +1,9 @@
-import { Fragment } from 'react';
-import Head from 'next/head';
-import { MongoClient } from 'mongodb';
+import { Fragment } from "react";
+import Head from "next/head";
+import { MongoClient } from "mongodb";
+import { Container } from "react-bootstrap";
 
-import PackList from '../components/packs/PackList';
+import PackList from "../components/packs/PackList";
 
 function HomePage(props) {
   return (
@@ -10,35 +11,25 @@ function HomePage(props) {
       <Head>
         <title>Little Treats</title>
         <meta
-          name='description'
-          content='Galletitas personalizadas y hechas con amor! <3'
+          name="description"
+          content="Galletitas personalizadas y hechas con amor! <3"
         />
       </Head>
-      <PackList packs={props.packs} />
+      <Container>
+        <PackList packs={props.packs} />
+      </Container>
     </Fragment>
   );
 }
 
-// export async function getServerSideProps(context) {
-//   const req = context.req;
-//   const res = context.res;
-
-//   // fetch data from an API
-
-//   return {
-//     props: {
-//       packs: DUMMY_packs
-//     }
-//   };
-// }
-
 export async function getStaticProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
-    'mongodb+srv://capumotto:macanudo@cluster0.gnfcw.mongodb.net/packs?retryWrites=true&w=majority');
+    "mongodb+srv://capumotto:macanudo@cluster0.gnfcw.mongodb.net/packs?retryWrites=true&w=majority"
+  );
   const db = client.db();
 
-  const packsCollection = db.collection('packs');
+  const packsCollection = db.collection("packs");
 
   const packs = await packsCollection.find().toArray();
 

@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 
 import MainNavigation from "./MainNavigation";
 import classes from "./Layout.module.css";
@@ -16,13 +16,11 @@ function Layout(props) {
   };
 
   return (
-    <Fragment>
-      <div className={classes.background}>
-        {cartIsShown && <Cart onClose={hideCartHandler} />}
-        <MainNavigation onShowCart={showCartHandler} />
-        <main className={classes.main}>{props.children}</main>
-      </div>
-    </Fragment>
+    <div>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <MainNavigation onShowCart={showCartHandler} />
+      <main className={classes.main}>{props.children}</main>
+    </div>
   );
 }
 

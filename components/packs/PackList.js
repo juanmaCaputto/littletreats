@@ -1,5 +1,5 @@
-import classes from './PackList.module.css';
-import Pack from '../Meals/MealItem/Pack';
+import classes from "./PackList.module.css";
+import Pack from "./Pack";
 
 function PackList(props) {
   return (

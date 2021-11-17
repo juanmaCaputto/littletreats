@@ -1,6 +1,7 @@
 .input {
-    display: flex;
+    display: flex-end;
     align-items: center;
+
     margin-bottom: 0.5rem;
   }
   
