@@ -2,7 +2,7 @@ import { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import classes from "./Pack.module.css";
-import PackItemForm from "../Meals/MealItem/PackItemForm";
+import PackItemForm from "./PackItemForm";
 import CartContext from "../../store/cart-context";
 import { Container, Row, Col } from "react-bootstrap";
 

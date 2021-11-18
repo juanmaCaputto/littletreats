@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import classes from "./PackItemForm.module.css";
-import Input from "../../ui/Input";
+import Input from "../ui/Input";
 
 const PackItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true)

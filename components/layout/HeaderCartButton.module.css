@@ -4,12 +4,14 @@
   border: none;
   background-color: #449b98;
   color: white;
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
+  margin-left: auto; 
+  margin-right: 0;
 }
 
 .button:hover,
@@ -18,8 +20,8 @@
 }
 
 .icon {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 2.8rem;
+  height: 2.8rem;
   margin-right: 0.5rem;
 }
 
@@ -27,7 +29,6 @@
   background-color: #2b7775;
   padding: 0.25rem 1rem;
   border-radius: 25px;
-  margin-left: 1rem;
   font-weight: bold;
 }
 

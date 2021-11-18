@@ -4,6 +4,7 @@ import { MongoClient } from "mongodb";
 import { Container } from "react-bootstrap";
 
 import PackList from "../components/packs/PackList";
+import MainLogo from "../components/layout/MainLogo";
 
 function HomePage(props) {
   return (
@@ -16,6 +17,7 @@ function HomePage(props) {
         />
       </Head>
       <Container>
+        <MainLogo />
         <PackList packs={props.packs} />
       </Container>
     </Fragment>

@@ -7,11 +7,11 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const MainNavigation = (props) => {
   return (
-    <header>
-      <Row className={classes.header}>
-        <Col className={classes.logo} sm md lg xl xxl={1}></Col>
-        <Col sm md lg xl xxl={8}>
-          <nav>
+    <header className={classes.header}>
+      <Container>
+        <Row>
+          {/* <Col className={classes.logo} sm md lg xl xxl={1}></Col> */}
+          {/* <nav>
             <ul>
               <li>
                 <Link href="/">Cookies!</Link>
@@ -20,12 +20,14 @@ const MainNavigation = (props) => {
                 <Link href="/new-pack">＋ Cookie!</Link>
               </li>
             </ul>
-          </nav>
-        </Col>
-        <Col sm md lg xl xxl={3}>
-          <HeaderCartButton onClick={props.onShowCart} />
-        </Col>
-      </Row>
+          </nav> */}
+          {/* </Col> */}
+          <Col sm={9} md={9} lg={9} xl={10} xxl={10} />
+          <Col sm={3} md={3} lg={3} xl={2} xxl={2}>
+            <HeaderCartButton onClick={props.onShowCart} />
+          </Col>
+        </Row>
+      </Container>
     </header>
   );
 };

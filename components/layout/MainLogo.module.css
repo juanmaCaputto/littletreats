@@ -1,0 +1,20 @@
+.logo {
+  animation: logo-appear 0.7s ease-out forwards;
+}
+
+.logo img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@keyframes logo-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
