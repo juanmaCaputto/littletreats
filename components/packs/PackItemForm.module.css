@@ -1,5 +1,5 @@
 .form {
-    text-align: center;
+    text-align: right;
   }
   
   .form button {
@@ -22,8 +22,5 @@
   @media (min-width: 576px) {
     .form button {
       padding: 0.25rem 2rem;
-    }
-    .form {
-      text-align: right;
     }
   }

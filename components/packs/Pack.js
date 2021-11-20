@@ -31,14 +31,12 @@ const Pack = (props) => {
           backgroundSize: "100%",
         }}
       >
-        <div
-          className={classes.spacer}
-        />
+        <div className={classes.spacer} />
         <div className={classes.extraGradient} />
         <Container className={classes.gradient}>
           <Row className={classes.content}>
             <Col
-              xs={6}
+              xs={4}
               sm={6}
               md={6}
               lg={6}
@@ -54,7 +52,7 @@ const Pack = (props) => {
               </div>
               <div className={classes.price}>{price}</div>
             </Col>
-            <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
+            <Col xs={8} sm={6} md={6} lg={6} xl={6} xxl={6}>
               <PackItemForm onAddToCart={addToCartHandler} id={props.id} />
             </Col>
           </Row>
