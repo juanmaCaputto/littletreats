@@ -14,6 +14,7 @@
 .price {
   margin-top: 0.25rem;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .info {
@@ -76,6 +77,9 @@
   }
   .content {
     padding-bottom: 2rem;
+  }
+  .price {
+    font-size: 1.5rem;
   }
 }
 
