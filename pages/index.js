@@ -18,10 +18,8 @@ function HomePage(props) {
           content="Galletitas personalizadas y hechas con amor! <3"
         />
       </Head>
-      <Container>
-        <MainLogo />
-        <PackList packs={props.packs} />
-      </Container>
+      <MainLogo />
+      <PackList packs={props.packs} />
     </Fragment>
   );
 }

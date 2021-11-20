@@ -1,6 +1,7 @@
 .list {
   list-style: none;
   margin: auto;
+  padding: 0;
   text-align: center;
   width: 100%;
   max-width: 60rem;
@@ -8,9 +9,8 @@
   background-color: rgb(104, 255, 250);
   color: rgb(49, 49, 49);
   border-radius: 5px;
-  padding: 1rem;
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom: 500px;
+  margin-bottom: 10rem;
   animation: packs-appear 1s ease-out forwards;
 }
 
@@ -23,5 +23,11 @@
   to {
     opacity: 0.9;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 576px) {
+  .list {
+    padding: 1rem;
   }
 }
