@@ -4,11 +4,11 @@
   border: none;
   background-color: #449b98;
   color: white;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.8rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 20px;
   font-weight: bold;
   margin-left: auto; 
   margin-right: 0;
@@ -20,15 +20,15 @@
 }
 
 .icon {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2rem;
+  height: 2rem;
   margin-right: 0.5rem;
 }
 
 .badge {
   background-color: #2b7775;
-  padding: 0.25rem 1rem;
-  border-radius: 25px;
+  padding: 0.20rem 0.8rem;
+  border-radius: 20px;
   font-weight: bold;
 }
 
@@ -56,5 +56,21 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (min-width: 576px) {
+  .button {
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+  }
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 0.5rem;
+  }
+  .badge {
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
   }
 }

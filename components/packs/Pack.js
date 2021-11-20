@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap-grid.css";
 
 import classes from "./Pack.module.css";
 import PackItemForm from "./PackItemForm";
@@ -22,25 +22,44 @@ const Pack = (props) => {
   };
 
   return (
-    <li className={classes.meal}>
-      <Container>
-        <Row>
-          <Col sm md lg xl xxl={4}>
-            <div className={classes.image}>
-              <img src={props.image} alt={props.title} />
-            </div>
-          </Col>
-          <Col sm md lg xl xxl={2} className={classes.info}>
-            <h3>{props.title}</h3>
-            <div className={classes.description}>{props.description}</div>
-            <div className={classes.price}>{price}</div>
-          </Col>
-          <Col sm md lg xl xxl={4} />
-          <Col sm md lg xl xxl={2}>
-            <PackItemForm onAddToCart={addToCartHandler} id={props.id} />
-          </Col>
-        </Row>
-      </Container>
+    <li className={classes.pack}>
+      <div
+        className={classes.image}
+        style={{
+          backgroundImage: `url(${props.image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100%",
+        }}
+      >
+        <div
+          className={classes.spacer}
+        />
+        <div className={classes.extraGradient} />
+        <Container className={classes.gradient}>
+          <Row className={classes.content}>
+            <Col
+              xs={6}
+              sm={6}
+              md={6}
+              lg={6}
+              xl={6}
+              xxl={6}
+              className={classes.info}
+            >
+              <h3>{props.title}</h3>
+              <div
+                className={`${classes.description} d-none d-md-block d-xl-block d-lg-block d-xxl-block`}
+              >
+                {props.description}
+              </div>
+              <div className={classes.price}>{price}</div>
+            </Col>
+            <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
+              <PackItemForm onAddToCart={addToCartHandler} id={props.id} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </li>
   );
 };

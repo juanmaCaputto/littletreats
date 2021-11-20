@@ -5,12 +5,14 @@ import { Container } from "react-bootstrap";
 
 import PackList from "../components/packs/PackList";
 import MainLogo from "../components/layout/MainLogo";
+import logo from "../images/logo-little.png";
 
 function HomePage(props) {
   return (
     <Fragment>
       <Head>
         <title>Little Treats</title>
+        <link rel="icon" href={logo} />
         <meta
           name="description"
           content="Galletitas personalizadas y hechas con amor! <3"
