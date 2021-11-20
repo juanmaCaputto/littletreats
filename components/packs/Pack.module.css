@@ -1,6 +1,8 @@
 .pack {
   display: flex;
   font-size: 0.7rem;
+  color:rgb(34, 85, 83);
+  position: relative;
 }
 
 .pack h3 {
@@ -29,6 +31,21 @@
 
 .spacer {
   height: 4rem;
+  text-align: right;
+}
+
+.infoIcon {
+  padding: 0;
+  border: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: right;
+  background-color:rgba(255, 255, 255, 0);
+}
+
+.infoIcon img {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .extraGradient {
@@ -55,7 +72,6 @@
 
 .content h3 {
   font-size: 0.9rem;
-  color: #2c292b;
   font-weight: bold;
 }
 
