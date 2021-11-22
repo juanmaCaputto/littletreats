@@ -41,6 +41,7 @@
   width: 1.5rem;
   text-align: right;
   background-color:rgba(255, 255, 255, 0);
+  margin: 0.3rem;
 }
 
 .infoIcon img {
@@ -75,6 +76,18 @@
   font-weight: bold;
 }
 
+.whiteBackground {
+  background-color: white;
+  width: 100%;
+  height: 13.5rem;
+  padding: 6.25rem 0;
+  margin: auto;
+  position: absolute;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 @media (min-width: 576px) {
   .spacer {
     height: 11.3rem;
@@ -97,6 +110,11 @@
   .price {
     font-size: 1.5rem;
   }
+  .whiteBackground {
+    height: 23rem;
+    padding: 10.75rem 0;
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -105,5 +123,35 @@
   }
   .image {
     height: 25rem;
+  }
+  .whiteBackground {
+    height: 25rem;
+    padding: 12.75rem 0;
+  }
+}
+
+.whiteBackgroundOpen {
+  animation: openWhiteBackground 0.2s ease-out;
+}
+
+.whiteBackgroundClosed {
+  animation: closeWhiteBackground 0.2s ease-out;
+}
+
+@keyframes openWhiteBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes closeWhiteBackground {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
   }
 }

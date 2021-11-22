@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap-grid.css";
-import Transition from "react-transition-group/Transition";
+import CSSTransition from "react-transition-group/CSSTransition";
 
 import classes from "./Pack.module.css";
 import PackItemForm from "./PackItemForm";
@@ -26,26 +26,31 @@ const Pack = (props) => {
 
   const showInfoHandler = () => {
     setShowBlock(true);
+    console.log("entrando");
+  };
+
+  const hideInfoHandler = () => {
+    setShowBlock(false);
   };
 
   return (
     <li className={classes.pack}>
-      <Transition in={showBlock} mountOnEnter unmountOnExit>
-        {(state) => (
-          <div
-            style={{
-              backgroundColor: "white",
-              position: "relative",
-              width: "100%",
-              height: "25rem",
-              margin: "auto",
-              transition: "opacity 0.2s ease-out",
-              opacity: state === "entering" ? 0 : 0.9,
-              position: "absolute"
-            }}
-          />
-        )}
-      </Transition>
+      <CSSTransition
+        in={showBlock}
+        timeout={200}
+        mountOnEnter
+        unmountOnExit
+        classNames={{
+          enter: "",
+          enterActive: classes.whiteBackgroundOpen,
+          exit: "",
+          exitActive: classes.whiteBackgroundClosed,
+        }}
+      >
+        <div className={classes.whiteBackground} onClick={hideInfoHandler}>
+          {props.description}
+        </div>
+      </CSSTransition>
       <div
         className={classes.image}
         style={{
