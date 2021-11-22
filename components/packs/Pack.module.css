@@ -115,6 +115,14 @@
     padding: 10.75rem 0;
     font-size: 1.5rem;
   }
+  .infoIcon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .infoIcon img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -127,6 +135,14 @@
   .whiteBackground {
     height: 25rem;
     padding: 12.75rem 0;
+  }
+  .infoIcon {
+    height: 3rem;
+    width: 3rem;
+  }
+  .infoIcon img {
+    height: 3rem;
+    width: 3rem;
   }
 }
 

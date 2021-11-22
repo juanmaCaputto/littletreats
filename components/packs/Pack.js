@@ -77,11 +77,6 @@ const Pack = (props) => {
               className={classes.info}
             >
               <h3>{props.title}</h3>
-              <div
-                className={`${classes.description} d-none d-md-block d-xl-block d-lg-block d-xxl-block`}
-              >
-                {props.description}
-              </div>
               <div className={classes.price}>{price}</div>
             </Col>
             <Col xs={8} sm={6} md={6} lg={6} xl={6} xxl={6}>
