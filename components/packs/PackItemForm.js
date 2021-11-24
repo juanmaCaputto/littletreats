@@ -10,7 +10,7 @@ const PackItemForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const enteredAmount = amountInputRef.current.value;
+    const enteredAmount = "1";
     const enteredAmountNumber = +enteredAmount;
 
     if (
