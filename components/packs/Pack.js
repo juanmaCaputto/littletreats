@@ -60,16 +60,13 @@ const Pack = (props) => {
         }}
       >
         <div className={classes.spacer}>
-          <button className={classes.infoIcon} onClick={showInfoHandler}>
-            <img src={infoIcon} alt="description" />
-          </button>
         </div>
         <div className={classes.extraGradient} />
         <Container className={classes.gradient}>
           <Row className={classes.content}>
             <Col
-              xs={4}
-              sm={6}
+              xs={8}
+              sm={8}
               md={6}
               lg={6}
               xl={6}
@@ -78,8 +75,11 @@ const Pack = (props) => {
             >
               <h3>{props.title}</h3>
               <div className={classes.price}>{price}</div>
+              <button className={classes.infoIcon} onClick={showInfoHandler}>
+                <img src={infoIcon} alt="description" />
+              </button>
             </Col>
-            <Col xs={8} sm={6} md={6} lg={6} xl={6} xxl={6}>
+            <Col className={classes.botton} xs={4} sm={4} md={6} lg={6} xl={6} xxl={6}>
               <PackItemForm onAddToCart={addToCartHandler} id={props.id} />
             </Col>
           </Row>

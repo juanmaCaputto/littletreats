@@ -5,10 +5,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function PackList(props) {
   return (
-    <Container md>
+    <Container>
       <Row>
-        <Col>
+        <Col className={classes.columna}>
           <ul className={classes.list}>
+            <li>
+              <div className={classes.title}>𝓝𝓾𝓮𝓼𝓽𝓻𝓪𝓼 𝓒𝓸𝓸𝓴𝓲𝓮𝓼</div>
+            </li>
             {props.packs.map((pack) => (
               <Pack
                 key={pack.id}
