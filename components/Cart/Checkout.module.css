@@ -1,6 +1,6 @@
 .form {
-    margin: 1rem 0;
-    height: 19rem;
+    margin: 1rem 0 0 0;
+    height: 100%;
     overflow: auto;
   }
   
@@ -16,26 +16,40 @@
   
   .control input {
     font: inherit;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(197, 255, 253);
     border-radius: 4px;
     width: 20rem;
     max-width: 100%;
   }
   
+  .control textarea {
+    font: inherit;
+    border: 1px solid rgb(197, 255, 253);
+    border-radius: 4px;
+    width: 20rem;
+    max-width: 100%;
+    resize: none;
+  }
+
+  .notes textarea {
+    height: 5rem;
+  }
+
   .actions {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    padding-top: 1rem;
   }
   
   .actions button {
     font: inherit;
-    color: #5a1a01;
+    color: rgb(49, 124, 122);
     cursor: pointer;
     background-color: transparent;
-    border: none;
+    border: 1px solid rgb(49, 124, 122);
     border-radius: 25px;
-    padding: 0.5rem 2rem; 
+    padding: 0.5rem 1.5rem; 
   }
   
   .actions button:hover,
@@ -44,14 +58,14 @@
   }
   
   .actions .submit {
-    border: 1px solid #5a1a01;
-    background-color: #5a1a01;
+    border: 1px solid rgb(49, 124, 122);
+    background-color: rgb(49, 124, 122);
     color: white;
   }
   
   .actions .submit:hover,
   .actions .submit:active {
-    background-color: #7a2706;
+    background-color: rgb(49, 124, 122);
   }
   
   .invalid label {
