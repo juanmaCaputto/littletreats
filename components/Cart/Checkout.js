@@ -83,7 +83,7 @@ const Checkout = (props) => {
       </div>
       <div className={dateControlClasses}>
         <label htmlFor="date">Fecha de Entrega</label>
-        <input type="text" id="date" ref={dateInputRef} />
+        <input type="date" id="date" ref={dateInputRef} />
         {!formInputsValidity.date && <p>Porfavor ingresar fecha válida!</p>}
       </div>
       <div className={notesControlClasses}>

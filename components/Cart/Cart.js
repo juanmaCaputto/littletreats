@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { send } from 'emailjs-com';
 
 import classes from "./Cart.module.css";
 import Modal from "../ui/Modal";
@@ -39,6 +40,32 @@ const Cart = (props) => {
         }),
       }
     );
+
+    const listItems = cartCtx.items.map((item) => (
+      `Pack: ${item.title}
+       Cantidad: ${item.amount}
+       
+       `
+    ))
+    var packs = ""
+    for (const item of listItems) {
+      packs = packs + item
+    }
+
+    userData.packs = listItems
+    userData.total = totalAmount
+
+    send(
+      'service_r2ty0lx',
+      'template_dxalrcx',
+      userData,
+      'user_pmPBKmrJghclHETl55HKv'
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    }).catch((err) => {
+      console.log('FAILED...', err);
+    });
+
     setIsSubmitting(false);
     setDidSubmit(true);
     cartCtx.clearCart();
